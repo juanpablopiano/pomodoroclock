@@ -9,18 +9,28 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{ title }}</h1>
+        <h1>Pomodoro Clock!</h1>
+        <h2>By JuanP and leMatos!</h2>
         <div id="display">
-            <h3>Work: {{ timer }} minutes</h3>
-            <h3>Break: {{ breakTimer }} minutes</h3>
-            <p>{{ String(minutes).padStart(2, "0") }}:{{ String(seconds).padStart(2, "0") }}</p>
+            <div class="work-time">
+                <p>Work time: <span id="work-time-display">4</span></p>
+                <button class="increase">+</button>
+                <button class="decrease">-</button>
+            </div>
+            <div class="break-time">
+                <p>Break time: <span id="break-time-display">1</span></p>
+                <button class="increase">+</button>
+                <button class="decrease">-</button>
+            </div>
+            <h3 id="timer-display">15:00</h3>
+            <h3 id="active-timer-display">Work Timer</h3>
         </div>
         <div id="controls">
-            <button id='play' @click="startTimer">Play</button>
-            <button id="pause" @click="pauseTimer">Pause</button>
-            <button id="stop" @click="stopTimer">Stop</button>
-            <button id="increase" @click="increaseTimer">+</button>
-            <button id="decrease" @click="decreaseTimer">-</button>
+            <button id='play'>Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+            <button id="increase">+</button>
+            <button id="decrease">-</button>
         </div>
     </div>
 </body>

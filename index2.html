@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <div id="display">
+            <h3>Work: {{ timer }} minutes</h3>
+            <h3>Break: {{ breakTimer }} minutes</h3>
+            <p>{{ String(minutes).padStart(2, "0") }}:{{ String(seconds).padStart(2, "0") }}</p>
+        </div>
+        <div id="controls">
+            <button id='play' @click="startTimer">Play</button>
+            <button id="pause" @click="pauseTimer">Pause</button>
+            <button id="stop" @click="stopTimer">Stop</button>
+            <button id="increase" @click="increaseTimer">+</button>
+            <button id="decrease" @click="decreaseTimer">-</button>
+        </div>
+    </div>
+</body>
+</html>
